@@ -2,6 +2,7 @@ import { LightRays } from './components/Background';
 import Navbar from './components/layouts/Navbar';
 import About from './components/layouts/About';
 import Skills from './components/layouts/Skills';
+import Projects from './components/layouts/Projects';
 import './App.css'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <main className='pt-24 px-4'>
         <About />
         <Skills />
+        <Projects />
       </main>  
     </>
   )

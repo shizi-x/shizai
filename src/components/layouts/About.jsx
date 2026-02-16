@@ -16,7 +16,7 @@ function About() {
                 </div>
                 <div className="">
                     <CircularText
-                        text="FullStack - DevSecOPS - ML/Data - "
+                        text="Fullstack - DevSecOPS - ML/Data - "
                         onHover="speedUp"
                         spinDuration={40}
                         className="custom-class"
