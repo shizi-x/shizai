@@ -1,19 +1,19 @@
-import About from './components/About';
 import { LightRays } from './components/Background';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
+import Navbar from './components/layouts/Navbar';
+import About from './components/layouts/About';
+import Skills from './components/layouts/Skills';
 import './App.css'
 
 function App() {
   return (
     <>
-      <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+      <div className='min-h-screen, relative'>
         <LightRays
           raysOrigin="top-center"
           raysColor="#ffffff"
           raysSpeed={1}
-          lightSpread={0.8}
-          rayLength={10}
+          lightSpread={0.5}
+          rayLength={3}
           followMouse={true}
           mouseInfluence={0.2}
           noiseAmount={0}
@@ -25,7 +25,11 @@ function App() {
         />
       </div>
       <Navbar />
-      <About />
+      
+      <main className='pt-24 px-4'>
+        <About />
+        <Skills />
+      </main>  
     </>
   )
 }

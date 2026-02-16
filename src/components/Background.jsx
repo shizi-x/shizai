@@ -389,11 +389,18 @@ void main() {
   }, [followMouse]);
 
   return (
-    <div
-      ref={containerRef}
-      className={`fixed w-screen h-screen pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
-    />
-  );
+  <div
+    ref={containerRef}
+    className="
+      fixed top-0 left-0 right-0 bottom-0
+      w-full h-full
+      pointer-events-none
+      z-10
+      overflow-hidden
+      bg-transparent
+    "
+  />
+);
 };
 
-export  {LightRays};
+export {LightRays};
