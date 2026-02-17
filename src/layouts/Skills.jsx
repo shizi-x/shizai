@@ -43,7 +43,7 @@ function Skills() {
         { id: "kube", name: "Kubernetes", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
         { id: "jenk", name: "Jenkins", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
         { id: "nginx", name: "Nginx", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
-        { id: "aws", name: "AWS", src: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/aws-color.png" },
+        { id: "aws", name: "AWS", src: "https://cdn.iconscout.com/icon/free/png-256/free-amazon-aws-icon-svg-download-png-2944772.png?f=webp" },
         { id: "azure", name: "Azure", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
     ];
 
@@ -73,9 +73,9 @@ function Skills() {
 
     return (
         <div className="h-screen">
-            <h1 className="text-center m-10 text-6xl text-white/95 font-bold">Technical Skills</h1>
+            <h1 className="text-center mx-auto items-center justify-center flex-wrap flex m-10 text-6xl text-white/95 font-bold">Technical Skills</h1>
 
-            <div className="w-fit bg-white/10 mb-10 rounded-xl flex gap-0.5 p-2 items-center mx-auto justify-center">
+            <div className="lg:w-fit  bg-white/10 lg:mb-10 rounded-xl flex lg:gap-1 lg:p-2 items-center flex-wrap mx-auto justify-center">
                 {buttons.map(btn => (
                     <button
                         key={btn}
@@ -87,10 +87,10 @@ function Skills() {
                 ))}
             </div>
 
-            <div className="flex flex-wrap w-4/5 items-center justify-center bg-white/10 rounded-xl mx-auto p-2 gap-3" id="skills">
+            <div className="flex xs:text-xs flex-wrap w-4/5 items-center justify-center bg-white/10 rounded-xl mx-auto p-2 gap-3" id="skills">
                 {currentSkills.map(skill => (
                     <div key={skill.id} className="flex items-center gap-2 p-2 text-white/80 bg-black/40 rounded-xl border border-transparent hover:border-white/15 hover:bg-black/20">
-                        {skill.src ? <img className="w-10 h-10" alt={`${skill.name} Logo`} src={skill.src} /> : null}
+                        {skill.src ? <img className="size-10 xs:size-5" alt={`${skill.name} Logo`} src={skill.src} /> : null}
                         {skill.name}
                     </div>
                 ))}

@@ -1,4 +1,4 @@
-import { IoMdHome, IoMdTrophy } from "react-icons/io";
+import { IoMdHome, IoMdTrophy, IoMdMail } from "react-icons/io";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { FaChartBar, FaCubes } from "react-icons/fa";
 
@@ -8,12 +8,12 @@ function Navbar() {
         { id: "pros", route: "/projects", icon: FaCubes },
         { id: "exp", route: "/experiences", icon: FaChartBar },
         { id: "achi", route: "/achievements", icon: IoMdTrophy },
-        { id: "contact", route: "/contact", icon: BsFillInfoSquareFill },
+        { id: "contact", route: "/contact", icon: IoMdMail },
     ];
 
     return (
         <nav className="fixed top-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-md shadow-2xl rounded-xl z-20">
-            <ul className="flex gap-7 px-3 py-1 justify-center">
+            <ul className="flex gap-7 xs:gap-3 sm:gap-4 md:gap-5 lg:gap-7 px-3 py-1 justify-center">
                 {dock.map((item) => {
                 const Icon = item.icon; 
                 return (

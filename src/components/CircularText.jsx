@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
+import Logo from "../assets/Z-blue.svg";
 
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
@@ -72,13 +73,20 @@ const CircularText = ({ text, spinDuration = 20, onHover = "speedUp", className 
 
   return (
     <motion.div
-      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
+      className={`m-0 mx-auto rounded-full xs:size-[200px] size-[260px] relative text-white font-black text-center cursor-pointer origin-center ${className}`}
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img
+          src={Logo}
+          alt="Logo Z"
+          className="size-50 xs:size-35"  
+        />
+      </div>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
         const factor = Math.PI / letters.length;
