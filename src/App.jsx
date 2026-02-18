@@ -1,14 +1,23 @@
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import ExperiencesPage from "./pages/ExperiencesPage.jsx";
+import AchievementsPage from "./pages/AchievementsPage";
+import ContactPage from "./pages/ContactPage.jsx";
 import { LightRays } from './components/Background';
 import Navbar from './layouts/Navbar';
-import About from './layouts/About';
-import Skills from './layouts/Skills';
-import Projects from './layouts/Projects';
-import Footer from './layouts/Footer';
 import './App.css'
 
 function App() {
   return (
     <>
+      <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/experiences" element={<ExperiencesPage />} />
+                <Route path="/achievements" element={<AchievementsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+      </Routes>    
       <div className='min-h-screen, relative'>
         <LightRays
           raysOrigin="top-center"
@@ -27,12 +36,6 @@ function App() {
         />
       </div>
       <Navbar />
-      
-      <main className='pt-24 px-4'>
-        <About />
-        <Skills />
-        <Footer />
-      </main>  
     </>
   )
 }
