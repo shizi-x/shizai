@@ -73,13 +73,13 @@ function Skills() {
 
     return (
         <div className="h-screen">
-            <h1 className="text-center mx-auto items-center justify-center flex-wrap flex m-10 text-6xl text-white/95 font-bold">Technical Skills</h1>
+            <h1 className="text-center mx-auto items-center justify-center flex-wrap flex lg:m-10 md:7 xs:m-5 xs:text-2xl md:text-4xl lg:text-6xl text-white/95 font-bold">Technical Skills</h1>
 
-            <div className="lg:w-fit  bg-white/10 lg:mb-10 rounded-xl flex lg:gap-1 lg:p-2 items-center flex-wrap mx-auto justify-center">
+            <div className="md:w-fit bg-white/10 lg:mb-10 md:mb-5 md:p-1 xs:p-1 xs:pl-0 xs:pr-0 xs:mb-5 rounded-xl flex lg:gap-1 lg:p-2 items-center flex-wrap mx-auto justify-center">
                 {buttons.map(btn => (
                     <button
                         key={btn}
-                        className="p-2 pt-1 pb-1 text-black rounded-xl bg-transparent focus:text-black/80 focus:bg-blue-300/80"
+                        className="lg:p-2 lg:pt-1 lg:pb-1 lg:text-base xs:text-sm xs:p-1.5 pt-1 pb-1 text-black rounded-xl bg-transparent focus:text-black/80 focus:bg-blue-300/80"
                         onClick={() => handleChangeSkills(btn.toLowerCase().replace(/\s/g, ""))}
                     >
                         {btn}
@@ -87,10 +87,10 @@ function Skills() {
                 ))}
             </div>
 
-            <div className="flex xs:text-xs flex-wrap w-4/5 items-center justify-center bg-white/10 rounded-xl mx-auto p-2 gap-3" id="skills">
+            <div className="flex xs:text-xs md:text-sm lg:text-base flex-wrap w-4/5 items-center justify-center bg-white/10 rounded-xl mx-auto xs:p-1 xs:gap-1 lg:p-2 lg:gap-3" id="skills">
                 {currentSkills.map(skill => (
-                    <div key={skill.id} className="flex items-center gap-2 p-2 text-white/80 bg-black/40 rounded-xl border border-transparent hover:border-white/15 hover:bg-black/20">
-                        {skill.src ? <img className="size-10 xs:size-5" alt={`${skill.name} Logo`} src={skill.src} /> : null}
+                    <div key={skill.id} className="flex items-center xs:gap-1 xs:p-2 lg:gap-2 lg:p-2 text-white/80 bg-black/40 rounded-xl border border-transparent hover:border-white/15 hover:bg-black/20">
+                        {skill.src ? <img className="lg:size-10 md:size-7 xs:size-5" alt={`${skill.name} Logo`} src={skill.src} /> : null}
                         {skill.name}
                     </div>
                 ))}
